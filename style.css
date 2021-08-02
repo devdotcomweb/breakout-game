@@ -1,5 +1,10 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 CSS Variables :root {
   --primary-color: green;
+  --secondary-color: honeydew;
   --background-color: #333;
 }
 
@@ -7,51 +12,10 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: green;
-  background-color: honeydew;
-  overflow: hidden;
-}
-
-#game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#reset {
-  position: absolute;
-  top: 100;
-  left: 10 
-}
-
-canvas {
-  border: 2px solid green;
-}
-
-#rules {
-  width: 100%;
-  height: 290px;
-  background-color: #333;
-  color: honeydew;
-  transform: translateY(290px);
-  transition: transform 1s ease-in-out;
-}
-
-#rules.show {
-  transform: translateY(0);
-}
-
-h3 {
-  display: inline
-  font-size: 1.5rem;
-  padding: 20px 0px 0px 20px;
-}
-
-p {
-  font-size: 1.2rem;
-  padding: 0 20px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 button {
@@ -67,14 +31,74 @@ button:hover {
   background-color: greenyellow;
 }
 
+#game-and-rules-container {
+  position: relative;
+  margin: auto;
+  max-width: 1200px;
+  max-height: 900px;
+  margin-bottom: 50px;
+  /* border: 3px solid orange; */
+  overflow: hidden;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#reset {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+
+canvas {
+  border: 2px solid green;
+}
+
+#rules {
+  width: 83.75%;
+  height: 290px;
+  background-color: #333;
+  color: honeydew;
+  margin: auto;
+  margin-top: 20px;
+  transform: translateY(300px);
+  transition: transform 1s ease-in-out;
+}
+
+#rules.show {
+  transform: translateY(0px);
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+  padding: 0 20px;
+}
+
 #rules-container {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 220px;
+  margin-bottom: 20px;
 }
 
-.show-rules {
+#show-rules {
   position: absolute;
-  left: 0px;
-  bottom: 60px;
+  top: 0;
+  right: 100px;
+}
+
+.close {
+  position: absolute;
+  bottom: 85px;
+  right: 10px;
 }

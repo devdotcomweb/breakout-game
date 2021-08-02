@@ -1,33 +1,41 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Breakout_3</title>
-</head>
-<body>
-    <button id="reset">Reset</button>
-    
-    <div id="game-container">
+  </head>
+  <body>
+    <div id="game-and-rules-container">
+      <button id="reset">Reset</button>
+
+      <div id="game-container">
         <h1 class="header">BREAKOUT GAME</h1>
-        <canvas id="canvas" width='1000px' height="450px"></canvas>
-    </div>
+        <canvas id="canvas" width="1000px" height="450px"></canvas>
+      </div>
 
-    <div id="rules-container">
+      <button id="show-rules">Show Rules</button>
 
-        <button class="show-rules">Show Rules</button>
+      <div id="rules-container">
         <div id="rules" class="show">
-            <h3>HOW TO PLAY:</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati eligendi nihil aliquam eius. Tempore excepturi libero ad provident fuga. Non esse explicabo aperiam ipsam rem pariatur facere, sunt quidem corrupti.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat molestiae facilis illo reprehenderit saepe dolor quasi possimus asperiores ab!</p>
-            <button class="close">Close</button>
+          <h3>HOW TO PLAY:</h3>
+          <p>
+            Your task is to direct the paddle to hit as many bricks as possible
+            after bouncing the ball. The more bricks you hit, the more points
+            you get. After you break all the bricks, you will go to the next
+            level and the ball will speed up. You can restart the game at any
+            time using the "Reset" button.
+          </p>
+
+          <button class="close">Close</button>
         </div>
+      </div>
     </div>
-
-
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
